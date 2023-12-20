@@ -8,7 +8,11 @@ export default function App() {
     <View style={{ flex: 1, backgroundColor: "white", padding: 60 }}>
       {/* the button component allows users to trigger actions*/}
       {/* the button component has platform-specific rendering for ios and android */}
-      <Button title="Press" onPress={() => console.log("Button pressed!")} />
+      <Button
+        title="Press"
+        onPress={() => console.log("Button pressed!")}
+        color="midnightblue"
+      />
     </View>
   );
 }
