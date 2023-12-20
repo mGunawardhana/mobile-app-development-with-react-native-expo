@@ -1,4 +1,5 @@
-import { View, Button, Image, Text, Pressable } from "react-native";
+import { useState } from "react";
+import { View, Button, Image, Text, Pressable, Modal } from "react-native";
 
 const logoImg = require("./assets/adaptive-icon.png");
 
@@ -13,7 +14,14 @@ export default function App() {
         onPress={() => console.log("Button pressed!")}
         color="midnightblue"
       />
-      <Pressable onLongPress={() => console.log("image pressed!")}>
+      <Modal>
+        <View style={{ flex: 1, backgroundColor: "lightblue", padding: 60 }}>
+          <Text>Modal content</Text>
+          <Button title="Close" color="midnightblue" />
+        </View>
+      </Modal>
+
+      {/* <Pressable onLongPress={() => console.log("image pressed!")}>
         <Image source={logoImg} style={{ width: 200, height: 200 }} />
       </Pressable>
       <Pressable onPress={() => console.log("text pressed!")}>
@@ -35,7 +43,8 @@ export default function App() {
           and speak better conversational English. You don't sound odd to us.
           Hear it at no charge. Get the podcast app. Coast-to-coast US radio.
         </Text>
-      </Pressable>
+      </Pressable> */}
+      {/* stopped in 14 video 1.42 */}
     </View>
   );
 }
